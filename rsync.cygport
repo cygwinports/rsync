@@ -1,6 +1,6 @@
 NAME="rsync"
 VERSION=3.1.1
-RELEASE=1
+RELEASE=2
 CATEGORY="Net"
 SUMMARY="Remote file synchronization tool"
 DESCRIPTION="Rsync is a fast and extraordinarily versatile file copying tool
@@ -10,6 +10,9 @@ by sending just the differences in the files across the link, without requiring
 that both sets of files are present at one of the ends of the link beforehand."
 HOMEPAGE="http://rsync.samba.org/"
 SRC_URI="http://rsync.samba.org/ftp/rsync/src/${NAME}-${VERSION}.tar.gz"
+PATCH_URI="http://pkgs.fedoraproject.org/cgit/rpms/rsync.git/plain/rsync-3.1.1-symlink.patch?h=f23"
+
+DISTCLEANFILES="proto.h*"
 
 src_install() {
 	cd ${B}
