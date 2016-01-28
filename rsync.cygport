@@ -1,5 +1,5 @@
 NAME="rsync"
-VERSION=3.0.9
+VERSION=3.1.1
 RELEASE=1
 CATEGORY="Net"
 SUMMARY="Remote file synchronization tool"
